@@ -33,7 +33,13 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
   "y de mi amor verdadero" terminaba en G en el PDF; se puso Bm.
 - La ubicación de acordes se sacó del PDF; puede haber alguno corrido.
 
+## Publicación
+- Repo público `matemi-dev/cancionero` (rama `main`), publicado con GitHub Pages en
+  https://matemi-dev.github.io/cancionero/
+- Para actualizar: commit + `git push` (la sesión de GitHub ya está guardada en la compu). Pages tarda 1–2 min.
+- Mateo prefiere que le **confirme qué voy a hacer antes de acciones públicas o irreversibles**.
+  Crear repos por API lo bloquea el permiso de Claude Code: eso lo hace Mateo en github.com.
+
 ## Pendiente
 - Tonos de las demás canciones y canciones nuevas para agregar.
-- Publicar para instalar en el celu (opción propuesta: GitHub Pages). Falta saber Android/iPhone y si tiene cuenta de GitHub.
 - Más adelante: versión imprimible (A4 o librito A5) desde los mismos datos.
