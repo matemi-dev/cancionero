@@ -1,0 +1,160 @@
+/* Estética: Fraunces + mono, papel crema y acento terracota */
+:root {
+  --bg: #ece7dc;
+  --sel: #e3dccd;
+  --campo: #ffffff;
+  --fg: #262320;
+  --muted: #6f685e;
+  --rule: #2b2724;
+  --hair: #c9c0b0;
+  --acento: #a0452a;
+  --fs: 19px;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1917; --sel: #26231f; --campo: #2c2824; --fg: #ece6da; --muted: #a39a8d;
+    --rule: #d9d1c3; --hair: #3f3a33; --acento: #e0835c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1917; --sel: #26231f; --campo: #2c2824; --fg: #ece6da; --muted: #a39a8d;
+  --rule: #d9d1c3; --hair: #3f3a33; --acento: #e0835c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--serif); font-weight: 400;
+  -webkit-tap-highlight-color: transparent; min-height: 100vh;
+}
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; padding: 0; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.pagina { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+
+/* mono chiquito en mayúsculas: el "N° 07" de la referencia */
+.filete, .bajada, .ritmos, .lista .num, .lista .tono-b, .barra, .meta, .seccion, .pie, .vacio {
+  font-family: var(--mono); letter-spacing: .08em;
+}
+
+/* ---------- Portada / lista ---------- */
+.filete {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: calc(22px + env(safe-area-inset-top)) 0 12px;
+  border-bottom: 1.5px solid var(--rule);
+  font-size: 13px; text-transform: uppercase;
+}
+.filete .der { display: flex; align-items: center; gap: 14px; }
+.tema { font-size: 16px; line-height: 1; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--rule); }
+.portada {
+  margin: 26px 0 16px; font-weight: 350; font-size: clamp(52px, 15vw, 76px);
+  line-height: .95; letter-spacing: -.02em; font-variation-settings: "opsz" 144;
+}
+.portada em { font-style: italic; font-weight: 300; }
+.bajada { margin: 0 0 24px; font-size: 13px; color: var(--muted); text-transform: uppercase; }
+
+.buscador input {
+  width: 100%; font: inherit; font-size: 18px; font-style: italic;
+  padding: 12px 14px 12px 44px; color: var(--fg);
+  background: var(--campo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5' fill='none' stroke='%238a8276' stroke-width='1.6'/%3E%3Cpath d='m15.5 15.5 5 5' stroke='%238a8276' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat 14px center / 20px;
+  border: 1.5px solid var(--rule); border-radius: 12px; outline: none;
+  -webkit-appearance: none; appearance: none;
+}
+.buscador input:focus { border-color: var(--acento); box-shadow: 0 0 0 3px color-mix(in srgb, var(--acento) 18%, transparent); }
+.buscador input::placeholder { color: var(--muted); }
+
+.ritmos { display: flex; gap: 18px; overflow-x: auto; padding: 14px 0 18px; scrollbar-width: none; }
+.ritmos::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; font-size: 12px; text-transform: uppercase; color: var(--muted);
+  padding: 4px 0; border-bottom: 1.5px solid transparent;
+}
+.chip[aria-selected="true"] { color: var(--acento); border-bottom-color: var(--acento); }
+
+.lista { list-style: none; margin: 0; padding: 0 0 60px; border-top: 1.5px solid var(--rule); }
+.lista li { border-bottom: 1.5px solid var(--rule); }
+.lista a {
+  display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; gap: 10px;
+  padding: 15px 0; color: inherit; text-decoration: none;
+}
+.lista .num { font-size: 13px; color: var(--muted); }
+.lista .nombre { font-size: 21px; line-height: 1.2; }
+.lista .nombre small { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+.lista .tono-b { font-size: 14px; }
+.lista a:active, .lista a:focus-visible { outline: none; }
+.lista a:active .nombre, .lista a:active .num, .lista a:active .tono-b,
+.lista a:focus-visible .nombre { color: var(--acento); }
+.lista a:active .nombre { font-style: italic; }
+.vacio { text-align: center; color: var(--muted); padding: 30px 0; font-size: 13px; }
+
+/* ---------- Canción ---------- */
+.barra {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: calc(10px + env(safe-area-inset-top)) 20px 10px;
+  background: var(--bg); border-bottom: 1.5px solid var(--rule);
+  font-size: 13px; text-transform: uppercase;
+}
+.volver { display: flex; align-items: center; gap: 8px; height: 40px; letter-spacing: inherit; text-transform: inherit; }
+.tono { display: flex; align-items: center; gap: 10px; }
+.tono strong { min-width: 46px; text-align: center; font-weight: 500; font-size: 17px; color: var(--acento); letter-spacing: 0; text-transform: none; }
+.redondo {
+  width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--rule);
+  display: grid; place-items: center; font-family: var(--mono); font-size: 18px; line-height: 1;
+}
+.redondo:active { background: var(--rule); color: var(--bg); }
+.redondo.grande { width: 56px; height: 56px; }
+
+.titulo {
+  margin: 26px 0 8px; font-weight: 350; font-size: clamp(36px, 10vw, 54px);
+  line-height: 1; letter-spacing: -.015em; font-variation-settings: "opsz" 144;
+}
+.meta {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  margin: 0 0 6px; padding-bottom: 14px; border-bottom: 1.5px solid var(--rule);
+  font-size: 12px; text-transform: uppercase; color: var(--muted);
+}
+.reset { color: var(--acento); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 0; }
+
+.letra { padding: 6px 0 calc(45vh + 90px); font-size: var(--fs); line-height: 1.45; font-weight: 380; }
+.ln { margin: 0; overflow-wrap: break-word; }
+.ln.con-acordes { line-height: 1.25; margin-top: .3em; }
+.estrofa { height: 1em; }
+.seccion {
+  display: flex; align-items: center; gap: 10px;
+  margin: 1.4em 0 .4em; font-size: 11px; text-transform: uppercase; color: var(--muted);
+}
+.seccion::after { content: ""; flex: 1; border-top: 1px solid var(--hair); }
+.nota { color: var(--muted); font-style: italic; font-size: .85em; }
+.solo { margin: .3em 0; font-size: .9em; }
+.solo .etq { font-style: italic; color: var(--muted); margin-right: .5em; }
+.seg { display: inline-block; vertical-align: baseline; }
+.seg > .c, .solo .c { font-family: var(--mono); color: var(--acento); font-weight: 500; font-size: .82em; letter-spacing: 0; }
+.seg > .c { display: block; padding-right: .5em; white-space: pre; line-height: 1.35; }
+.seg > .w { display: block; white-space: pre; }
+.solo .c { margin-right: .55em; white-space: nowrap; }
+.c.sep { color: var(--muted); font-weight: 400; }
+
+/* pie: línea de progreso + botones, como el reproductor de la referencia */
+.pie {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+  background: var(--bg); padding: 0 20px calc(12px + env(safe-area-inset-bottom));
+  font-size: 13px;
+}
+.progreso { height: 1.5px; background: var(--hair); max-width: 600px; margin: 0 auto; }
+.progreso span { display: block; height: 100%; width: 0; background: var(--acento); }
+.pie-fila { display: flex; align-items: center; gap: 16px; max-width: 600px; margin: 0 auto; padding-top: 12px; }
+.tam { display: flex; gap: 18px; }
+.tam button { font-family: var(--mono); letter-spacing: .04em; padding: 8px 2px; }
+.vel { flex: 1; accent-color: var(--acento); }
+#btn-scroll { margin-left: auto; }
+#btn-scroll .ic-pausa { display: none; }
+#btn-scroll[aria-pressed="true"] { border-color: var(--acento); color: var(--acento); }
+#btn-scroll[aria-pressed="true"] .ic-pausa { display: block; }
+#btn-scroll[aria-pressed="true"] .ic-play { display: none; }
