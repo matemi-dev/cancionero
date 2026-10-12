@@ -2086,4 +2086,119 @@ se curan todas las penas.
 `
 },
 
+{
+  titulo: "Santiago del Estero es un chango moreno",
+  ritmo: "Chacarera",
+  tono: "G",
+  miTono: "G",
+  letra: `
+G
+En cada chacarera,
+C
+yo estoy volviendo al pago.
+Am
+Y soy bombo latiendo,
+D7
+si te pienso Santiago.
+C
+En cada chacarera,
+D7                  G
+estoy volviendo al pago.
+
+G
+Crespín soy cuando siento,
+C
+Santiago que te nombran.
+Am
+Y el diablo de la Macha,
+D7
+el corazón me ronda.
+C
+Crespín soy cuando siento,
+D7                  G
+Santiago que te nombran.
+
+G
+Cuando escucho a dos cajas,
+C
+golpear una vidala.
+Am
+Un coyuyo de ausencia,
+D7
+se prende a mi garganta.
+C
+Cuando escucho a dos cajas,
+D7                  G
+golpear una vidala.
+
+ESTRIBILLO
+G
+Santiago del Estero,
+C
+es un chango moreno.
+Am
+Con música en los ojos,
+D7
+y un corazón coplero.
+C
+Santiago del Estero,
+D7                  G
+es un chango moreno.
+
+SEGUNDA
+G
+Chilalo, piel morena,
+C
+bombisto y vidalero.
+Am
+Cantor de chacareras,
+D7
+¡claro! soy santiagueño.
+C
+Chilalo, piel morena,
+D7                  G
+bombisto y vidalero.
+
+G
+Lejos del pago añoro,
+C
+las noches santiagueñas.
+Am
+Y ese parral por cielo,
+D7
+con racimo de estrellas.
+C
+Lejos del pago añoro,
+D7                  G
+las noches santiagueñas.
+
+G
+Andar es mi destino,
+C
+llamen pagos ajenos.
+Am
+Pero a mi santiagueña,
+D7
+Mishkila siempre vuelvo.
+C
+Andar es mi destino,
+D7                  G
+llamen pagos ajenos.
+
+ESTRIBILLO
+G
+Santiago del Estero,
+C
+es un chango moreno.
+Am
+Con música en los ojos,
+D7
+y un corazón coplero.
+C
+Santiago del Estero,
+D7                  G
+es un chango moreno.
+`
+},
+
 ];
