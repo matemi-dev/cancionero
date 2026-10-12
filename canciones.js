@@ -2087,7 +2087,7 @@ se curan todas las penas.
 },
 
 {
-  titulo: "Santiago del Estero es un chango moreno",
+  titulo: "Santiago, chango moreno",
   ritmo: "Chacarera",
   tono: "G",
   miTono: "G",
