@@ -27,7 +27,10 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
 ## Estado (11/10/2026)
 - 23 canciones pasadas del PDF (la *Zamba de amor en vuelo* repetida quedó una sola).
 - Tonos definidos por Mateo: **Entra a mi pago sin golpear → Am** (intro E7 Am, "Fue mucho mi penar" en F);
-  **Al jardín de la república → Dm**; **El olvidado → Em**.
+  **Al jardín de la república → Dm**; **El olvidado → Em**; **Santiago, chango moreno → E** (escrita en G, la pasó Mateo);
+  **La simple → F#m**; **Cachito → E**; **Tía Rosa → A** (Mateo la piensa "en C" porque la estrofa arranca en C:
+  se cargó `tono: "C"` → `miTono: "A"`, o sea 3 semitonos abajo; confirmar si quería subirla a A desde G).
+- En la portada dice "creado por MATEO MISSIO". Cada canción tiene buscador (lupa) para saltar a otra.
   El resto todavía en el tono del PDF (`miTono` = `tono`), falta que Mateo pase los suyos.
 - Corregidos errores de tipeo del PDF. Para confirmar con Mateo: en *Perfume de carnaval*,
   "y de mi amor verdadero" terminaba en G en el PDF; se puso Bm.

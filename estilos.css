@@ -91,6 +91,19 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .lista a:active .nombre, .lista a:active .num, .lista a:active .tono-b,
 .lista a:focus-visible .nombre { color: var(--acento); }
 .lista a:active .nombre { font-style: italic; }
+.bajada em { font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 16px; margin-right: .35em; }
+
+/* buscador dentro de la canción: se despliega debajo de la barra */
+.lupa { margin-left: auto; }
+.lupa[aria-expanded="true"] { background: var(--rule); color: var(--bg); }
+.panel-buscar {
+  position: sticky; top: calc(61px + env(safe-area-inset-top)); z-index: 4;
+  background: var(--bg); border-bottom: 1.5px solid var(--rule);
+  padding: 12px 0 4px; max-height: 70vh; overflow-y: auto;
+}
+.lista.mini { padding-bottom: 8px; margin-top: 10px; }
+.lista.mini a { padding: 11px 0; }
+.lista.mini .nombre { font-size: 18px; }
 .vacio { text-align: center; color: var(--muted); padding: 30px 0; font-size: 13px; }
 
 /* ---------- Canción ---------- */

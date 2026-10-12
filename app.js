@@ -178,20 +178,47 @@ $("ritmos").onclick = (e) => {
   dibujarLista();
 };
 
-function dibujarLista() {
-  const q = sinAcentos($("buscar").value.trim());
-  const visibles = canciones.filter((c) =>
-    (ritmoElegido === "Todos" || c.ritmo === ritmoElegido) &&
-    (!q || sinAcentos(c.titulo + " " + c.ritmo + " " + c.letra).includes(q)));
-  $("lista").innerHTML = visibles.map((c) => `
+function buscar(texto, ritmo = "Todos") {
+  const q = sinAcentos(texto.trim());
+  const enTitulo = (c) => sinAcentos(c.titulo).includes(q);
+  return canciones
+    .filter((c) => (ritmo === "Todos" || c.ritmo === ritmo) &&
+      (!q || sinAcentos(c.titulo + " " + c.ritmo + " " + c.letra).includes(q)))
+    .sort((a, b) => (q ? enTitulo(b) - enTitulo(a) : 0));   // primero las que lo tienen en el título
+}
+const htmlFilas = (lista) => lista.map((c) => `
     <li><a href="#/${c.id}">
       <span class="num">${c.num}</span>
       <span class="nombre">${esc(c.titulo)}<small>${esc(c.ritmo)}</small></span>
       <span class="tono-b">${esc(c.miTono)}</span>
     </a></li>`).join("");
+
+function dibujarLista() {
+  const visibles = buscar($("buscar").value, ritmoElegido);
+  $("lista").innerHTML = htmlFilas(visibles);
   $("vacio").hidden = visibles.length > 0;
 }
 $("buscar").oninput = dibujarLista;
+
+// Buscador dentro de una canción: para saltar a otra sin volver a la lista
+function abrirBuscador(abrir) {
+  $("panel-buscar").hidden = !abrir;
+  $("btn-buscar").setAttribute("aria-expanded", String(abrir));
+  if (abrir) {
+    $("buscar-en-cancion").value = "";
+    dibujarResultados();
+    $("buscar-en-cancion").focus();
+  }
+}
+function dibujarResultados() {
+  $("resultados").innerHTML = htmlFilas(buscar($("buscar-en-cancion").value).filter((c) => c !== actual));
+}
+$("btn-buscar").onclick = () => abrirBuscador($("panel-buscar").hidden);
+$("buscar-en-cancion").oninput = dibujarResultados;
+$("buscar-en-cancion").onkeydown = (e) => {
+  if (e.key === "Escape") abrirBuscador(false);
+  if (e.key === "Enter") { const a = $("resultados").querySelector("a"); if (a) location.hash = a.getAttribute("href"); }
+};
 
 // ---------- Vista de canción ----------
 function dibujarCancion() {
@@ -277,7 +304,8 @@ function ruta() {
     actual = c;
     semis = c.base;                       // siempre arranca en TU tono
     $("c-titulo").textContent = c.titulo;
-    $("c-numero").textContent = `N° ${c.num} · ${c.ritmo}`;
+    $("c-numero").textContent = `N° ${c.num}`;
+    abrirBuscador(false);
     $("c-ritmo").textContent = `${c.ritmo} — mi tono ${c.miTono}`;
     dibujarCancion();
     actualizarProgreso();

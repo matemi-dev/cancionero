@@ -544,7 +544,7 @@ Mi vida yo vuelva a verla
   titulo: "La simple (Solo pa' bailarla)",
   ritmo: "Chacarera",
   tono: "Am",
-  miTono: "Am",
+  miTono: "F#m",
   letra: `
 Intro: E7 Am
 
@@ -715,8 +715,8 @@ Intro: Am Dm E7 Am (x2)
 {
   titulo: "Chacarera de la tía Rosa",
   ritmo: "Chacarera",
-  tono: "G",
-  miTono: "G",
+  tono: "C",
+  miTono: "A",
   letra: `
 Intro: D G D G (x2)
 
@@ -783,7 +783,7 @@ mejor
   titulo: "Cachito, campeón de Corrientes",
   ritmo: "Chamamé",
   tono: "G",
-  miTono: "G",
+  miTono: "E",
   letra: `
 Instrumental acordeón: D G D G · C G · D C G
 
@@ -2090,7 +2090,7 @@ se curan todas las penas.
   titulo: "Santiago, chango moreno",
   ritmo: "Chacarera",
   tono: "G",
-  miTono: "G",
+  miTono: "E",
   letra: `
 G
 En cada chacarera,
