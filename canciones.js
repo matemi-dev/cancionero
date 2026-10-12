@@ -1862,12 +1862,20 @@ Em                F#7
 y en cada vaso de vino
 B7                Em
 tiembla el lucero del alba
+G                    A
+y en cada vaso de vino
+B7                Em
+tiembla el lucero del alba
 
 Em             D
 Zamba del amanecer
 D7                   G B7
 arrullo de Balderrama
 Em                F#7
+llora por la medianoche
+B7                Em
+canta por la madrugada
+G                    A
 llora por la medianoche
 B7                Em
 canta por la madrugada
