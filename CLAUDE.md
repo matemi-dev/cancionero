@@ -30,6 +30,9 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
   **Al jardín de la república → Dm**; **El olvidado → Em**; **Santiago, chango moreno → E** (escrita en G, la pasó Mateo);
   **La simple → F#m**; **Cachito → E**; **Tía Rosa → A** (Mateo la piensa "en C" porque la estrofa arranca en C:
   se cargó `tono: "C"` → `miTono: "A"`, o sea 3 semitonos abajo; confirmar si quería subirla a A desde G).
+- Más tonos de Mateo: Bohemio guitarrero → F#m, Dejame que me vaya → F#m, Alma de rezabaile → Dm,
+  Balderrama → Am (se agregó la repetición final de la 2ª estrofa), Chacarera para mi vuelta → Em,
+  La sachapera → A (se agregó intro A E7).
 - En la portada dice "creado por MATEO MISSIO". Cada canción tiene buscador (lupa) para saltar a otra.
   El resto todavía en el tono del PDF (`miTono` = `tono`), falta que Mateo pase los suyos.
 - Corregidos errores de tipeo del PDF. Para confirmar con Mateo: en *Perfume de carnaval*,

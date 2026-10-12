@@ -1314,7 +1314,7 @@ la chacarera.
   titulo: "Zamba para un bohemio guitarrero",
   ritmo: "Zamba",
   tono: "Am",
-  miTono: "Am",
+  miTono: "F#m",
   letra: `
 Am            Dm
 Ovillado por el vino
@@ -1472,7 +1472,7 @@ dame la magia y la suerte, quiero ser de nuevo chango.
   titulo: "Dejame que me vaya",
   ritmo: "Chacarera",
   tono: "Am",
-  miTono: "Am",
+  miTono: "F#m",
   letra: `
 Intro: Am Am Dm E7 Am
 
@@ -1589,7 +1589,7 @@ y que con ella muera.
   titulo: "Alma de rezabaile",
   ritmo: "Chacarera",
   tono: "Em",
-  miTono: "Em",
+  miTono: "Dm",
   letra: `
 Intro: G A G A
 
@@ -1809,7 +1809,7 @@ yo no te puedo olvidar.
   titulo: "Balderrama",
   ritmo: "Zamba",
   tono: "Em",
-  miTono: "Em",
+  miTono: "Am",
   letra: `
 Em             D
 Orillitas del canal
@@ -1829,6 +1829,10 @@ Adentro puro temblar
 D7                   G B7
 el bombo con la baguala
 Em                F#7
+y se alborota quemado
+B7                Em
+dele chispear la guitarra
+G                    A
 y se alborota quemado
 B7                Em
 dele chispear la guitarra
@@ -1888,7 +1892,7 @@ si se apaga Balderrama?
   titulo: "Chacarera para mi vuelta",
   ritmo: "Chacarera",
   tono: "F#m",
-  miTono: "F#m",
+  miTono: "Em",
   letra: `
 Intro: C#7 F#m
 
@@ -1975,8 +1979,10 @@ lo mucho que te he añorado.
   titulo: "La sachapera",
   ritmo: "Chacarera",
   tono: "C",
-  miTono: "C",
+  miTono: "A",
   letra: `
+Intro: C G7
+
    C
 Churita mi buena moza
          E7      Am
