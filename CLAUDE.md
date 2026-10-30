@@ -33,6 +33,10 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
 - Más tonos de Mateo: Bohemio guitarrero → F#m, Dejame que me vaya → F#m, Alma de rezabaile → Dm,
   Balderrama → Am (se agregó la repetición final a las estrofas que no la tenían), Chacarera para mi vuelta → Em,
   La sachapera → A (se agregó intro A E7).
+- Nueva: *El monte qué lindo está* (chacarera, escrita en C → miTono B, intro F# B al principio y entre estrofas,
+  sin signos de exclamación). El autoscroll arranca en velocidad 2.
+- Nueva: *Gato del festival* (ritmo Gato, Em; la segunda parte usa los mismos acordes que la primera).
+  Para confirmar: "polvaredal" (¿polvareda?).
 - En la portada dice "creado por MATEO MISSIO". Cada canción tiene buscador (lupa) para saltar a otra.
   El resto todavía en el tono del PDF (`miTono` = `tono`), falta que Mateo pase los suyos.
 - Corregidos errores de tipeo del PDF. Para confirmar con Mateo: en *Perfume de carnaval*,

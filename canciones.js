@@ -2302,4 +2302,99 @@ lechiguana y chilalos.
 `
 },
 
+{
+  titulo: "Gato del festival",
+  ritmo: "Gato",
+  tono: "Em",
+  miTono: "Em",
+  letra: `
+Intro: Em B Em B Em
+
+    Em             Am
+Bailando en el festival
+     B         Em
+como santiagueño
+                    Am
+costumbre del pago es
+      B         Em
+hacerlo sin miedo
+   C            Am
+la moza más linda
+     B          Em
+ansiosa me espera
+
+    Em              B
+Atajate que voy mi amor
+             Em
+con ganas de mudancear
+                   B
+y en el corazón repicar
+                Em
+el alma y enamorar
+
+   Em          C
+Se van arrimando
+  B            Em
+otros bailarines
+
+    Em                 B
+Que comienza mucho a gustar
+                       Em
+porque todos quieren bailar
+                       B
+y la fiesta se agranda más
+                  Em
+con cohetes y palmas
+
+      D               G
+Bailando este gato estoy
+   B          Em
+como santiagueño
+
+SEGUNDA
+Intro: Em B Em B Em
+
+Em             Am
+Una niña del lugar
+B         Em
+asoma su cuerpo
+       Am
+en el escenario
+B           Em
+se arma el revuelo
+C        Am
+todo es alegría
+B        Em
+bajo mi cielo
+
+Em                     B
+Hay un viejo que está machao'
+                        Em
+y que su poncho hace revolear
+                B
+si toma hasta el aclarar
+                   Em
+tirao' va a quedar nomás
+
+Em         C
+La última vuelta
+B             Em
+para el gato alegre
+
+Em          B
+Levantemos polvaredal
+                  Em
+zapateando hasta terminar
+                  B
+la donosa sigan igual
+               Em
+floreando su zarandear
+
+D                   G
+Bailando este gato estoy
+   B          Em
+como santiagueño
+`
+},
+
 ];
