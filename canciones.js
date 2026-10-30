@@ -2216,7 +2216,7 @@ es un chango moreno.
 },
 
 {
-  titulo: "El monte qué lindo está",
+  titulo: "Chacarera del chilalo",
   ritmo: "Chacarera",
   tono: "C",
   miTono: "B",
