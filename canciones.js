@@ -2215,4 +2215,91 @@ es un chango moreno.
 `
 },
 
+{
+  titulo: "El monte qué lindo está",
+  ritmo: "Chacarera",
+  tono: "C",
+  miTono: "B",
+  letra: `
+Intro: G C
+
+F
+El monte qué lindo está
+cuando hay miel de palo.
+G7       F
+Bajo los garabatos
+G7           C
+lechiguana y chilalos.
+
+Intro: G C
+
+F
+Aromas de tusca en flor
+perfuman la huella
+G7          F
+y el mistol coloreando
+G7                    C
+está de adorno en la tierra.
+
+Intro: G C
+
+F
+Las tunas y el piquillín
+ya están madurando
+G7              F
+y por sobre los cercos
+G7                C
+están las dolcas colgando.
+
+ESTRIBILLO
+F
+Ofreciendo está el cardón
+su flor blanca y pura
+G7              F
+mientras que la ulúa
+G7            C
+ya se abre de madura.
+
+SEGUNDA
+Intro: G C
+
+F
+Por entre el viscacheral
+y pampa taquellus
+G7       F
+florecen quiscaloros
+G7       C
+tuscas y sisaquellus.
+
+Intro: G C
+
+F
+El sachayoj se hace oír
+cuidando los montes
+G7         F
+despiertan salamancas
+G7           C
+en medio los locontes.
+
+Intro: G C
+
+F
+Se entreveran los tum-tum
+de bombos legüeros
+G7            F
+de hachas, de malambos
+G7            C
+y de criollos morteros.
+
+ESTRIBILLO
+F
+El monte qué lindo está
+cuando hay miel de palo.
+G7       F
+Bajo los garabatos
+G7           C
+lechiguana y chilalos.
+`
+},
+
 ];
