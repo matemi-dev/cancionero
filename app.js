@@ -225,6 +225,7 @@ function dibujarTodo() {
   $("lista").hidden = canciones.length === 0;
   $("cargar").hidden = modo !== "rock";
   $("cargar-vacio").hidden = canciones.length > 0;
+  $("btn-copia").hidden = rock.length === 0;
 }
 
 // ---------- Selector Folklore / Rock ----------
@@ -331,7 +332,15 @@ $("archivos").onchange = async (e) => {
   let cargadas = 0;
   const salteados = [];
   for (const f of archivos) {
-    const ext = (/\.(txt|docx?)$/i.exec(f.name) || [, ""])[1].toLowerCase();
+    const ext = (/\.(txt|docx?|json)$/i.exec(f.name) || [, ""])[1].toLowerCase();
+    if (ext === "json") {                     // copia de todo el rock hecha con "Guardar copia"
+      try {
+        const copia = JSON.parse(await leerTexto(f));
+        if (!Array.isArray(copia.canciones)) throw new Error();
+        for (const c of copia.canciones) { porId.set(slug(c.titulo), c); cargadas++; }
+      } catch (err) { salteados.push(f.name); }
+      continue;
+    }
     let c = null;
     try {
       const texto = ext === "txt" ? await leerTexto(f)
@@ -346,7 +355,17 @@ $("archivos").onchange = async (e) => {
   guardarRock([...porId.values()]);
   $("cargar-msj").hidden = false;
   $("cargar-msj").textContent = `Cargué ${cargadas} ${cargadas === 1 ? "canción" : "canciones"}.` +
-    (salteados.length ? ` No pude leer: ${salteados.join(", ")} (van archivos .txt, .doc o .docx).` : "");
+    (salteados.length ? ` No pude leer: ${salteados.join(", ")} (van archivos .txt, .doc, .docx o la copia .json).` : "");
+};
+
+// Un solo archivo con todo el rock (con los cambios), para pasarlo a otro dispositivo
+$("btn-copia").onclick = () => {
+  const copia = { cancioneroRock: 1, fecha: new Date().toISOString().slice(0, 10), canciones: leer("rock", []) };
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(copia, null, 1)], { type: "application/json" }));
+  a.download = `cancionero-rock-${copia.fecha}.json`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
 };
 
 // Cambios a una canción de rock guardada (por ahora, el tono)

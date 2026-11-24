@@ -50,7 +50,7 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
 - Las canciones de rock NO van en el código (son temas de otros autores y el repo es público): se cargan con
   "Cargar canciones (.txt)" desde `D:\Documentos de Mateo\HISTÓRICOS\MI MUSICA\CANCIONERO` y quedan en
   localStorage (`cancionero.rock`) de cada dispositivo. Tono = primer acorde; idioma detectado por palabras;
-  se puede cambiar nombre, idioma, guardar tono o quitar desde la canción. También lee .doc y .docx (`word.js`).
+  se puede guardar el tono desde la canción. "Guardar copia de todo el rock" baja un .json que se vuelve a cargar con el mismo botón (para pasar todo a otro dispositivo). También lee .doc y .docx (`word.js`).
 
 ## Publicación
 - Repo público `matemi-dev/cancionero` (rama `main`), publicado con GitHub Pages en
