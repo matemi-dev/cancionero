@@ -46,7 +46,7 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
 - La ubicación de acordes se sacó del PDF; puede haber alguno corrido.
 
 ## Modo Rock (prototipo, 23/11/2026, sin publicar)
-- Selector FOLKLORE / ROCK arriba; rock usa la misma tipografía con paleta gris verdosa y acento azul petróleo
+- Selector FOLKLORE / ROCK arriba (la app siempre abre en folklore; rock abre en "Rock en castellano"); rock usa la misma tipografía con paleta gris verdosa y acento azul petróleo
   (`:root[data-modo="rock"]` en `estilos.css`). Etiquetas fijas: "Rock en castellano" y "Rock en inglés".
 - Las canciones de rock NO van en el código (son temas de otros autores y el repo es público): se cargan con
   "Cargar canciones (.txt)" desde `D:\Documentos de Mateo\HISTÓRICOS\MI MUSICA\CANCIONERO` y quedan en

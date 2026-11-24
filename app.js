@@ -150,7 +150,7 @@ function preparar(lista, modo) {
 const sinSignos = (t) => t.replace(/^[¿¡"'(]+/, "");   // "¿Para quién…" se ordena en la P
 const folklore = preparar(CANCIONES, "folklore");
 let rock = preparar(leer("rock", []), "rock");
-let modo = leer("modo", "folklore") === "rock" ? "rock" : "folklore";
+let modo = "folklore";            // siempre abre en folklore (un link a una canción de rock abre rock)
 let canciones = modo === "rock" ? rock : folklore;
 document.documentElement.dataset.modo = modo;
 
@@ -231,7 +231,6 @@ function dibujarTodo() {
 // ---------- Selector Folklore / Rock ----------
 function aplicarModo(m) {
   modo = m;
-  guardar("modo", m);
   document.documentElement.dataset.modo = m;
   canciones = m === "rock" ? rock : folklore;
   ritmoElegido = m === "rock" ? RITMOS_ROCK[0] : "Todos";   // rock abre en "Rock en castellano"
