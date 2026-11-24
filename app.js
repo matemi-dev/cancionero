@@ -332,7 +332,8 @@ $("archivos").onchange = async (e) => {
   let cargadas = 0;
   const salteados = [];
   for (const f of archivos) {
-    const ext = (/\.(txt|docx?|json)$/i.exec(f.name) || [, ""])[1].toLowerCase();
+    let ext = (/\.(txt|docx?|json)$/i.exec(f.name) || [, ""])[1].toLowerCase();
+    if (ext === "txt" && /^\s*\{\s*"cancioneroRock"/.test(await leerTexto(f))) ext = "json";   // por si se guardó como .txt
     if (ext === "json") {                     // copia de todo el rock hecha con "Guardar copia"
       try {
         const copia = JSON.parse(await leerTexto(f));

@@ -1,6 +1,6 @@
 // Guarda la app en el celu para que funcione sin internet.
 // Con internet trae la versión nueva; sin señal (o si tarda más de 3 s) usa la copia guardada.
-const CACHE = "cancionero-v2";
+const CACHE = "cancionero-v3";
 const ARCHIVOS = [
   "./", "index.html", "estilos.css", "app.js", "word.js", "canciones.js",
   "manifest.webmanifest", "icono.svg", "icono-180.png", "icono-192.png", "icono-512.png",
