@@ -2470,4 +2470,77 @@ Madrugando en mi alma este gato nació.
 `
 },
 
+{
+  titulo: "Un domingo santiagueño",
+  ritmo: "Chacarera",
+  tono: "A",
+  miTono: "A",
+  letra: `
+A                 D
+Un domingo santiagueño
+                       A
+no es un domingo cualquiera,
+      F#7             B
+hasta el sol viene saliendo
+          E7        A
+con ritmo de chacarera.
+
+A                  D
+Cada cual tiene su dicha
+                      A
+con baile, empanada y vino,
+           F#7   B
+zapatiando en el salitre,
+   E7                    A
+si más caliente es más lindo.
+
+A              D
+Y arriba en la costanera
+                 A
+se ven parrillas humeando,
+   F#7         B
+es hora que el calavera
+      E7          A
+está el incendio apagando.
+
+ESTRIBILLO
+A            D
+Los domingos santiagueños
+                     A
+diosquiera que no se pierdan,
+   F#7               B
+de aquí le mando un suspiro
+  E7        A
+a mi tierra santiagueña.
+
+SEGUNDA
+A                D
+Añoranzas de La Banda,
+                A
+achalitay, qué hermosura,
+      F#7     B
+Apalo con sus hermanos
+         E7 A
+preparan la compostura.
+
+A                  D
+Qué linda noche i pasao
+                A
+pensando de que volvía
+  F#7            B
+a empacharme con zapallo,
+     E7          A
+tuna fresquita y sandía.
+
+A                D
+Comieron toda la noche
+                 A
+vino y pastel de vizcacha
+  F#7           B
+y ahora caminan firme
+            E7 A
+disimulando la macha.
+`
+},
+
 ];

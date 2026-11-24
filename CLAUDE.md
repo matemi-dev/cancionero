@@ -36,6 +36,7 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
   La sachapera → A (se agregó intro A E7).
 - Nueva: *Chacarera del chilalo* (chacarera, escrita en C → miTono B, intro F# B al principio y entre estrofas,
   sin signos de exclamación). El autoscroll arranca en velocidad 2.
+- Nueva (tema de Mateo): *Un domingo santiagueño* (chacarera en A, misma vuelta A D / A / F#7 B / E7 A en todas las estrofas).
 - Nueva: *Gato del festival* (ritmo Gato, Em; la segunda parte usa los mismos acordes que la primera).
   "polvaredal" va así (confirmado).
 - En la portada dice "creado por MATEO MISSIO". Cada canción tiene buscador (lupa) para saltar a otra.
