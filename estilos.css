@@ -13,6 +13,11 @@
   --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   color-scheme: light;
 }
+/* Rock: misma tipografía, papel gris verdoso y acento azul petróleo */
+:root[data-modo="rock"] {
+  --bg: #e1e7e4; --sel: #d3ddd9; --campo: #ffffff; --fg: #1a2326; --muted: #5d6a6b;
+  --rule: #22302f; --hair: #b6c4c1; --acento: #1f6a78;
+}
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #1b1917; --sel: #26231f; --campo: #2c2824; --fg: #ece6da; --muted: #a39a8d;
@@ -24,6 +29,16 @@
   --bg: #1b1917; --sel: #26231f; --campo: #2c2824; --fg: #ece6da; --muted: #a39a8d;
   --rule: #d9d1c3; --hair: #3f3a33; --acento: #e0835c;
   color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-modo="rock"]:not([data-theme="light"]) {
+    --bg: #121a1c; --sel: #1a2427; --campo: #1e292c; --fg: #e2eae7; --muted: #8e9f9e;
+    --rule: #cdd9d6; --hair: #2b3a3c; --acento: #52b6ad;
+  }
+}
+:root[data-modo="rock"][data-theme="dark"] {
+  --bg: #121a1c; --sel: #1a2427; --campo: #1e292c; --fg: #e2eae7; --muted: #8e9f9e;
+  --rule: #cdd9d6; --hair: #2b3a3c; --acento: #52b6ad;
 }
 
 * { box-sizing: border-box; }
@@ -51,6 +66,13 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   font-size: 13px; text-transform: uppercase;
 }
 .filete .der { display: flex; align-items: center; gap: 14px; }
+/* selector Folklore / Rock */
+.modos { display: flex; gap: 16px; }
+.modo {
+  font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; font-size: 13px;
+  color: var(--muted); padding: 4px 0; border-bottom: 1.5px solid transparent;
+}
+.modo[aria-selected="true"] { color: var(--acento); border-bottom-color: var(--acento); }
 .tema { font-size: 16px; line-height: 1; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--rule); }
 .portada {
   margin: 26px 0 16px; font-weight: 350; font-size: clamp(52px, 15vw, 76px);
@@ -106,6 +128,17 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .lista.mini .nombre { font-size: 18px; }
 .vacio { text-align: center; color: var(--muted); padding: 30px 0; font-size: 13px; }
 
+/* cargar canciones de rock desde .txt */
+.cargar { padding: 0 0 80px; text-align: center; }
+.cargar-texto { color: var(--muted); font-size: 16px; line-height: 1.45; margin: 26px 0; }
+.boton-cargar { display: inline-block; cursor: pointer; }
+.boton-cargar input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.boton-cargar span {
+  display: inline-block; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 12px 18px; border: 1.5px solid var(--rule); border-radius: 999px; background: var(--campo);
+}
+.boton-cargar:hover span, .boton-cargar input:focus-visible + span { border-color: var(--acento); color: var(--acento); }
+
 /* ---------- Canción ---------- */
 .barra {
   position: sticky; top: 0; z-index: 5;
@@ -134,6 +167,7 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   font-size: 12px; text-transform: uppercase; color: var(--muted);
 }
 .reset { color: var(--acento); font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 0; }
+.subtitulo { margin: 0 0 12px; color: var(--muted); font-style: italic; font-size: 16px; }
 
 .letra { padding: 6px 0 calc(45vh + 90px); font-size: var(--fs); line-height: 1.45; font-weight: 380; }
 .ln { margin: 0; overflow-wrap: break-word; }

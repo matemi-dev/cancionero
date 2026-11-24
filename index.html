@@ -23,13 +23,16 @@
 <section id="vista-lista" class="vista">
   <div class="pagina">
     <div class="filete">
-      <span>Folklore</span>
+      <span class="modos" role="tablist" aria-label="Cancionero">
+        <button class="modo" role="tab" data-modo="folklore">Folklore</button>
+        <button class="modo" role="tab" data-modo="rock">Rock</button>
+      </span>
       <span class="der">
         <span id="cantidad"></span>
         <button id="btn-tema" class="tema" aria-label="Cambiar claro / oscuro">◐</button>
       </span>
     </div>
-    <h1 class="portada">Cancionero<br><em>pal' fogón</em></h1>
+    <h1 class="portada">Cancionero<br><em id="portada-sub">pal' fogón</em></h1>
     <p class="bajada"><em>creado por</em> MATEO MISSIO</p>
 
     <label class="buscador">
@@ -40,6 +43,19 @@
 
     <ol id="lista" class="lista"></ol>
     <p id="vacio" class="vacio" hidden>No encontré ninguna canción.</p>
+
+    <!-- Rock: las canciones se cargan desde archivos .txt y quedan guardadas en este dispositivo -->
+    <div id="cargar" class="cargar" hidden>
+      <p id="cargar-vacio" class="cargar-texto">
+        Todavía no hay canciones de rock en este dispositivo. Elegí los archivos <b>.txt</b>, <b>.doc</b> o <b>.docx</b> de tu carpeta
+        de canciones (podés marcar varios a la vez) y quedan guardados acá, para usar sin internet.
+      </p>
+      <label class="boton-cargar">
+        <input id="archivos" type="file" accept=".txt,.doc,.docx,text/plain" multiple>
+        <span>＋ Cargar canciones</span>
+      </label>
+      <p id="cargar-msj" class="cargar-texto" hidden></p>
+    </div>
   </div>
 </section>
 
@@ -71,9 +87,11 @@
 
   <div class="pagina">
     <h2 id="c-titulo" class="titulo"></h2>
+    <p id="c-sub" class="subtitulo" hidden></p>
     <p class="meta">
       <span id="c-ritmo"></span>
       <button id="tono-reset" class="reset" hidden>● Volver a mi tono</button>
+      <button id="tono-guardar" class="reset" hidden>Guardar como mi tono</button>
     </p>
     <article id="c-letra" class="letra"></article>
   </div>
@@ -95,6 +113,7 @@
 </section>
 
 <script src="canciones.js"></script>
+<script src="word.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

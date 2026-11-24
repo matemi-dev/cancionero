@@ -21,6 +21,7 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
   `Etiqueta: acordes` = acordes sueltos; línea TODA EN MAYÚSCULAS = sección; `(bis)` = nota.
 - `app.js` — lista, búsqueda, filtros por ritmo, transporte, tamaño de letra, autoscroll, wake lock.
   Los acordes se pegan al inicio de la palabra de abajo (no se cortan palabras al saltar de renglón).
+- `word.js` — saca el texto de .doc (Word 97–2003) y .docx para la carga de rock.
 - `sw.js` — offline (red primero, copia guardada si no hay señal o tarda >3 s). Si se agrega un archivo, sumarlo a `ARCHIVOS`.
 - `.claude/servidor.ps1` + `.claude/launch.json` — vista previa local en http://localhost:8765.
 
@@ -42,6 +43,14 @@ Las fuentes vienen de Google Fonts y el service worker las guarda para usar sin 
 - Corregidos errores de tipeo del PDF. Para confirmar con Mateo: en *Perfume de carnaval*,
   "y de mi amor verdadero" terminaba en G en el PDF; se puso Bm.
 - La ubicación de acordes se sacó del PDF; puede haber alguno corrido.
+
+## Modo Rock (prototipo, 23/11/2026, sin publicar)
+- Selector FOLKLORE / ROCK arriba; rock usa la misma tipografía con paleta gris verdosa y acento azul petróleo
+  (`:root[data-modo="rock"]` en `estilos.css`). Etiquetas fijas: "Rock en castellano" y "Rock en inglés".
+- Las canciones de rock NO van en el código (son temas de otros autores y el repo es público): se cargan con
+  "Cargar canciones (.txt)" desde `D:\Documentos de Mateo\HISTÓRICOS\MI MUSICA\CANCIONERO` y quedan en
+  localStorage (`cancionero.rock`) de cada dispositivo. Tono = primer acorde; idioma detectado por palabras;
+  se puede cambiar nombre, idioma, guardar tono o quitar desde la canción. También lee .doc y .docx (`word.js`).
 
 ## Publicación
 - Repo público `matemi-dev/cancionero` (rama `main`), publicado con GitHub Pages en

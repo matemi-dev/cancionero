@@ -2004,6 +2004,8 @@ Con la chacarera doble
          G7         C
 se curan todas las penas.
 
+Intro: C G7
+
 C
 Dulce fruto de mis pagos
    E7        Am
@@ -2016,6 +2018,8 @@ juguito de sachapera.
 Con la chacarera doble
          G7         C
 se curan todas las penas.
+
+Intro: C G7
 
 C
 Da gusto andar por los montes
@@ -2045,6 +2049,8 @@ Con la chacarera doble
 se curan todas las penas.
 
 SEGUNDA
+Intro: C G7
+
    C
 Bienhaiga mi buena moza
          E7  Am
@@ -2058,6 +2064,8 @@ Con la chacarera doble
          G7     C
 se curan todas las penas.
 
+Intro: C G7
+
    C
 Pal' tiempo de la arropiada
          E7  Am
@@ -2070,6 +2078,8 @@ cantando coplas se queda.
 Con la chacarera doble
       G7        C
 se curan todas las penas.
+
+Intro: C G7
 
 C
 Con harina de algarroba
@@ -2106,6 +2116,8 @@ se curan todas las penas.
   tono: "G",
   miTono: "E",
   letra: `
+Intro: C G
+
 G
 En cada chacarera,
 C
@@ -2119,6 +2131,8 @@ En cada chacarera,
 D7                  G
 estoy volviendo al pago.
 
+Intro: C G
+
 G
 Crespín soy cuando siento,
 C
@@ -2131,6 +2145,8 @@ C
 Crespín soy cuando siento,
 D7                  G
 Santiago que te nombran.
+
+Intro: C G
 
 G
 Cuando escucho a dos cajas,
@@ -2160,6 +2176,8 @@ D7                  G
 es un chango moreno.
 
 SEGUNDA
+Intro: C G
+
 G
 Chilalo, piel morena,
 C
@@ -2173,6 +2191,8 @@ Chilalo, piel morena,
 D7                  G
 bombisto y vidalero.
 
+Intro: C G
+
 G
 Lejos del pago añoro,
 C
@@ -2185,6 +2205,8 @@ C
 Lejos del pago añoro,
 D7                  G
 las noches santiagueñas.
+
+Intro: C G
 
 G
 Andar es mi destino,
@@ -2394,6 +2416,57 @@ D                   G
 Bailando este gato estoy
    B          Em
 como santiagueño
+`
+},
+
+{
+  titulo: "Gato de la madrugada",
+  ritmo: "Gato",
+  tono: "Em",
+  miTono: "Em",
+  letra: `
+Intro: Em B7
+
+G                 B7         Em
+Una madrugada que olía a cedrón
+G                    B7       Em
+poleo y albahaca este gato nació.
+Vuelta: G B7 Em
+              B7                     Em
+Cantaban cardenales, calandrias y zorzales
+                 G                B7           Em
+qué lindo que se oía en medio el monte el bandoneón.
+
+   G                   B7       Em
+Me engozaba el alma un dulce violín
+              B7                   Em
+achalay ese bombo, qué lindo ese rasguido,
+                  G          B7            Em
+que se mete en la sangre alegrando el corazón.
+                 G           B7     Em
+Madrugando en mi alma este gato nació.
+
+SEGUNDA
+Intro: Em B7
+
+G                B7      Em
+El sol despacito salió a mosquetear
+G                        B7        Em
+y el coro del monte a la fiesta se unió.
+Vuelta: G B7 Em
+                B7                 Em
+El canto de los gallos salidos como ruego,
+            G             B7         Em
+revuelos de cencerros que venían del corral.
+
+G              B7           Em
+Qué lindo es el monte en su despertar,
+                B7                   Em
+todo ese olor a vida, con su perfume agreste,
+                  G      B7           Em
+que se mete en la sangre alegrando el corazón.
+                 G         B7   Em
+Madrugando en mi alma este gato nació.
 `
 },
 
